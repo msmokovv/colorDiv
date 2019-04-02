@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Index</title>
+		<style>
+			body{text-align:center}
+			td{width:20px;}
+			div{width:70%; margin:0 auto; height:220px}
+		</style>
+	</head>
+	<body>
+		<input type="button" value="Color Div" onClick="colorDiv();" />
+		<div id="result_div"></div>
+		<script>
+			
+			var dDiv = document.getElementById('result_div');
+			function	omNumber(numb){
+				return Math.floor(Math.random() * (numb + 1));
+			}
+			console.log(omNumber(255));
+			function orRGB(){
+				var red = omNumber(255);
+				var green = omNumber(255);
+				var blue = omNumber(255);
+				var color = 'rgb(' + red + ',' + green + ',' + blue + ')';
+				console.log(color);
+				return color;
+			}
+			
+			function colorDiv(){
+				dDiv.style.backgroundColor = orRGB();
+			}
+			colorDiv();
+		</script>
+	</body>
+</html>
